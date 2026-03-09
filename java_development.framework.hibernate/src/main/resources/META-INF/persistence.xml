@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             version="3.0"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+             https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+
+    <persistence-unit name="Employee">
+
+        <class>java_development.framework.hibernate_jpa.entity.Employee</class>
+
+        <properties>
+
+            <!-- MySQL Driver -->
+            <property name="jakarta.persistence.jdbc.driver"
+                      value="com.mysql.cj.jdbc.Driver"/>
+
+            <!-- Database URL -->
+            <property name="jakarta.persistence.jdbc.url"
+                      value="jdbc:mysql://localhost:3306/employee-database"/>
+
+            <!-- Database Username -->
+            <property name="jakarta.persistence.jdbc.user"
+                      value="root"/>
+
+            <!-- Database Password (change if your MySQL password is different) -->
+            <property name="jakarta.persistence.jdbc.password"
+                      value="manas"/>
+
+            <!-- Hibernate Settings -->
+            <property name="hibernate.hbm2ddl.auto"
+                      value="update"/>
+
+            <property name="hibernate.show_sql"
+                      value="true"/>
+
+            <property name="hibernate.format_sql"
+                      value="true"/>
+
+        </properties>
+
+    </persistence-unit>
+
+</persistence>
